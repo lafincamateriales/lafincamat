@@ -1,0 +1,516 @@
+/*==================================================
+    MATERIALES LA FINCA
+    style.css
+==================================================*/
+
+:root{
+
+    --primary:#B35A2E;
+    --primary-dark:#944621;
+
+    --secondary:#E7DFD6;
+
+    --dark:#1E1E1E;
+
+    --gray:#4B4B4B;
+
+    --white:#FFFFFF;
+
+    --light:#F8F8F8;
+
+    --shadow:0 15px 40px rgba(0,0,0,.08);
+
+    --shadow-hover:0 20px 60px rgba(0,0,0,.18);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+
+    --max-width:1300px;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--white);
+
+    color:var(--dark);
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    display:block;
+
+    width:100%;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+section{
+
+    padding:90px 8%;
+
+}
+
+.container{
+
+    width:100%;
+
+    max-width:var(--max-width);
+
+    margin:auto;
+
+}
+header{
+
+    position:fixed;
+
+    width:100%;
+
+    top:0;
+
+    left:0;
+
+    z-index:999;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(255,255,255,.82);
+
+    border-bottom:1px solid rgba(0,0,0,.05);
+
+    transition:.3s;
+
+}
+
+.navbar{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    height:90px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 25px;
+
+}
+
+.logo{
+
+    width:180px;
+
+}
+
+.menu{
+
+    display:flex;
+
+    gap:35px;
+
+}
+
+.menu a{
+
+    color:var(--dark);
+
+    font-weight:500;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+.menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-8px;
+
+    left:0;
+
+    width:0;
+
+    height:3px;
+
+    background:var(--primary);
+
+    transition:.35s;
+
+}
+
+.menu a:hover::after{
+
+    width:100%;
+
+}
+
+.menu a:hover{
+
+    color:var(--primary);
+
+}
+
+.acciones{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.btn-nav{
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+}
+
+.btn-nav:hover{
+
+    background:var(--primary-dark);
+
+}
+
+.btn-whatsapp{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:22px;
+
+}
+.hero{
+
+    height:100vh;
+
+    background:url("../img/hero.png") center center/cover;
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    rgba(15,15,15,.78),
+
+    rgba(15,15,15,.48),
+
+    rgba(15,15,15,.10)
+
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:3;
+
+    max-width:700px;
+
+    margin-left:8%;
+
+    color:white;
+
+}
+
+.hero-logo{
+
+    width:190px;
+
+    margin-bottom:35px;
+
+}
+
+.hero h1{
+
+    font-size:4rem;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+}
+
+.hero span{
+
+    color:var(--primary);
+
+}
+
+.hero p{
+
+    font-size:1.15rem;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+    max-width:580px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+}
+.btn-principal{
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:18px 34px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:var(--shadow);
+
+}
+
+.btn-principal:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.btn-secundario{
+
+    border:2px solid white;
+
+    color:white;
+
+    padding:18px 34px;
+
+    border-radius:50px;
+
+    transition:.35s;
+
+}
+
+.btn-secundario:hover{
+
+    background:white;
+
+    color:var(--dark);
+
+}
+.beneficios{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    background:var(--light);
+
+}
+
+.beneficio{
+
+    text-align:center;
+
+    padding:40px 30px;
+
+    background:white;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.beneficio:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.beneficio i{
+
+    font-size:45px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+
+}
+
+.beneficio h3{
+
+    margin-bottom:10px;
+
+}
+.productos{
+
+    background:white;
+
+}
+
+.titulo{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.titulo h2{
+
+    font-size:3rem;
+
+    margin-bottom:15px;
+
+}
+
+#contenedor-productos{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+}
+.clientes{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.clientes img{
+
+    border-radius:25px;
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.clientes h2{
+
+    font-size:2.7rem;
+
+    margin-bottom:25px;
+
+}
+
+.clientes p{
+
+    line-height:1.9;
+
+    margin-bottom:20px;
+
+    color:var(--gray);
+
+}
+
+.nota{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+footer{
+
+    background:#111;
+
+    color:#bbb;
+
+    text-align:center;
+
+    padding:30px;
+
+    font-size:.95rem;
+
+}
